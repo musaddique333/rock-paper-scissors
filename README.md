@@ -73,7 +73,7 @@ The JavaScript code handles the game's functionality, including:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Author 👨‍💻
-- Author: musaddique333 [![GitHub](https://img.shields.io/badge/GitHub-YourGitHubUsername-brightgreen)](https://github.com/yourgithubusername)
+- Author: musaddique333 [![GitHub](https://img.shields.io/badge/GitHub-musaddique333-brightgreen)](https://github.com/musaddique333)
 
 ---
 
