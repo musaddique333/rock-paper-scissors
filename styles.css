@@ -1,23 +1,39 @@
 *{
     background-color: #000;
+    font-family: 'Minecraft', sans-serif;
     color: #fff;
+    padding: 0;
+    margin: 0;
 }
 
-body .image.part{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-}
-
-main,
-.text.part{
+body{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0;
-    margin: 0;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.0vw 1.0vh;
+    margin: 1.0vw 1.0vh;
+}
+
+.text.part, .image-part, .score_board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.0vw 1.0vh;
+    margin: 1.0vw 1.0vh;
+    gap: 1.0vh;
+} 
+
+.text.part, .score_board{
+    flex-direction: column;
 }
 
 @keyframes appear{
@@ -34,6 +50,24 @@ main,
 @keyframes fadeout {
     from {opacity: 0;}
     to {opacity: 0;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes drop_down{
+    from{transform: translateY(-100%);}
+    to{transform: translateY(0%);}
+}
+
+.message{
+    font-size: 5.0vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: blink 1.5s 0s infinite;
 }
 
 .text.one{
@@ -64,6 +98,7 @@ main,
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: drop_down 8s 0s linear, fadein 8s 0s 1 linear;
 }
 
 img{
@@ -86,15 +121,10 @@ img:hover{
     padding: 0;
 }
 
-.scoreboard{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.score{
-    font-size: 1.5vw;
+.score, .points{
+    font-size: 2.0vw;
     text-align: center;
     margin: 0;
     padding: 0;
+    animation: fadeout 8s 0s 1 linear;
 }
