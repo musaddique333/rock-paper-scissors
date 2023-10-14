@@ -60,21 +60,21 @@ main{
 }
 
 .message{
-    font-size: 7.0vw;
+    font-size: 8.0vw;
     color: rgb(255, 0, 0);
     text-align: center;
     margin: 0;
     padding: 0;
-    animation: blink 1.5s 0s infinite;
+    animation: blink 0.8s 0s infinite;
 }
 
 .game_message{
-    font-size: 5.0vw;
+    font-size: 8.0vw;
     color: rgb(255, 0, 0);
     text-align: center;
     margin: 0;
     padding: 0;
-    animation: blink 1.5s 0s infinite;
+    animation: blink 1s 0s infinite;
 }
 
 .text.one{
@@ -141,6 +141,7 @@ img:hover{
 }
 
 .points{
+    font-size: 15vh;
     color: rgb(0, 255, 0);
 }
 

@@ -10,6 +10,8 @@ const message = document.querySelector('.message');
 const game_message = document.querySelector('.game_message');
 const game_over = document.querySelector('.game_over');
 const try_again = document.querySelector('.try_again');
+const you = document.querySelector('.you');
+const computer = document.querySelector('.computer');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -25,37 +27,46 @@ const score_update = () => {
 
 const game = () => {
     game_message.innerHTML = `${3 - gameRounds} rounds Left!`;
-    score.innerHTML = options[Math.floor(Math.random() * 3)];
+    let chose_comp = options[Math.floor(Math.random() * 3)];
     
     if (chosen == 'rock') {
-        if (score.innerHTML == 'paper') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        if (chose_comp == 'paper') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             computerScore++;
-        } else if (score.innerHTML == 'scissors') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        } else if (chose_comp == 'scissors') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             playerScore++;
         } else {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
         }
     } else if (chosen == 'paper') {
-        if (score.innerHTML == 'scissors') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        if (chose_comp == 'scissors') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             computerScore++;
-        } else if (score.innerHTML == 'rock') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        } else if (chose_comp == 'rock') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             playerScore++;
         } else {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
         }
     } else if (chosen == 'scissors') {
-        if (score.innerHTML == 'rock') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        if (chose_comp == 'rock') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             computerScore++;
-        } else if (score.innerHTML == 'paper') {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+        } else if (chose_comp == 'paper') {
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
             playerScore++;
         } else {
-            score.innerHTML = `You -- ${chosen}  ::  computer -- ${score.innerHTML}`;
+            you.innerHTML = chosen;
+            computer.innerHTML = chose_comp;
         }
     }
     
@@ -71,7 +82,7 @@ const endRound = () => {
             computerRoundsWon++;
         }
         roundsPlayed = 0;
-        message.style.fontSize = '5.0vw';
+        message.style.fontSize = '15.0vw';
         message.style.color = 'rgb(0, 115, 255)';
         message.innerHTML = `${playerRoundsWon} - ${computerRoundsWon}`;
         setTimeout(() => {
