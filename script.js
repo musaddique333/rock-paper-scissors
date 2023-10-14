@@ -28,7 +28,7 @@ const score_update = () => {
 const game = () => {
     game_message.innerHTML = `${3 - gameRounds} rounds Left!`;
     let chose_comp = options[Math.floor(Math.random() * 3)];
-    
+
     if (chosen == 'rock') {
         if (chose_comp == 'paper') {
             you.innerHTML = chosen;
@@ -69,7 +69,7 @@ const game = () => {
             computer.innerHTML = chose_comp;
         }
     }
-    
+
     score_update();
 };
 
@@ -116,7 +116,7 @@ const endRound = () => {
             });
             if (playerRoundsWon > computerRoundsWon) {
                 game_over.innerHTML = "You Saved The World!";
-            } else{
+            } else {
                 game_over.innerHTML = "Earth Has Been Destroyed!";
             }
             try_again.innerHTML = "Try Again?";
@@ -126,8 +126,9 @@ const endRound = () => {
 
 setTimeout(() => {
     message.style.fontSize = '15.0vw';
-    message.innerHTML = "S. T. A. R. T"}, 9000);
-document.addEventListener('click', () => {message.innerHTML = ""});
+    message.innerHTML = "S. T. A. R. T"
+}, 9000);
+document.addEventListener('click', () => { message.innerHTML = "" });
 
 rock.addEventListener('click', () => { chosen = options[0]; game(); });
 paper.addEventListener('click', () => { chosen = options[1]; game(); });
