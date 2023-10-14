@@ -71,11 +71,13 @@ const endRound = () => {
             computerRoundsWon++;
         }
         roundsPlayed = 0;
-        message.style.fontSize = '3.0vw';
+        message.style.fontSize = '5.0vw';
         message.style.color = 'rgb(0, 115, 255)';
         message.innerHTML = `${playerRoundsWon} - ${computerRoundsWon}`;
-        playerScore = 0;
-        computerScore = 0;
+        setTimeout(() => {
+            playerScore = 0;
+            computerScore = 0;
+        }, 3000);
     }
     if (gameRounds === 3) {
         game_message.style.paddingTop = '10.0vh';
