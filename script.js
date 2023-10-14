@@ -85,10 +85,8 @@ const endRound = () => {
         message.style.fontSize = '15.0vw';
         message.style.color = 'rgb(0, 115, 255)';
         message.innerHTML = `${playerRoundsWon} - ${computerRoundsWon}`;
-        setTimeout(() => {
-            playerScore = 0;
-            computerScore = 0;
-        }, 3000);
+        playerScore = 0;
+        computerScore = 0;
     }
     if (gameRounds === 3) {
         game_message.style.paddingTop = '10.0vh';
