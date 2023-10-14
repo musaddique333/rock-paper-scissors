@@ -11,6 +11,9 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.body{
     height: 100vh;
 }
 
@@ -58,8 +61,18 @@ main{
     to{transform: translateY(0%);}
 }
 
-.message{
-    font-size: 5.0vw;
+.message, .footer{
+    font-size: 8.0vw;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    animation: blink 1.5s 0s infinite;
+}
+
+.game_message{
+    font-size: 3.0vw;
+    color: rgb(255, 0, 0);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -75,6 +88,7 @@ main{
 }
 
 .text.two {
+    color: rgb(0, 255, 0);
     font-size: 4.0vw;
     white-space: nowrap;
     overflow: hidden;
@@ -111,16 +125,37 @@ img:hover{
 }
 
 .image-part figcaption{
+    color: rgb(0, 115, 255);
     font-size: 2.0vw;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin-top: 2.0vh;
 }
 
 .score, .points{
     font-size: 3.0vw;
     text-align: center;
-    margin: 0;
-    padding: 0;
+    margin-top: 2.0vh;
     animation: fadeout 8s 0s 1 linear;
+} 
+
+.score{
+    color: rgb(255, 0, 0);
+}
+
+.points{
+    color: rgb(0, 255, 0);
+}
+
+.wasted{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.game_over{
+    text-align: center;
+    font-size: 5.0vw;
+    color: rgb(255, 0, 0);
+    animation: blink 1.0s 0s infinite;
 }
