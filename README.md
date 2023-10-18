@@ -1,4 +1,4 @@
-# Rock-Paper-Scissors Game 🎮
+# Rock-Paper-Scissors Game🎮
 
 [![GitHub](https://img.shields.io/github/license/musaddique333/rock-paper-scissors)](https://github.com/musaddique333/rock-paper-scissors/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/musaddique333/rock-paper-scissors)](https://github.com/musaddique333/rock-paper-scissors/stargazers)
